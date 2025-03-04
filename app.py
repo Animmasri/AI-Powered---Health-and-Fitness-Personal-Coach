@@ -1,6 +1,3 @@
-pip install streamlit 
-pip install google-generativeai
-pip install reportlab 
 
 import app as st
 import google.generativeai as genai
