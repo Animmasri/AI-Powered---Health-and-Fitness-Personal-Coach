@@ -9,9 +9,10 @@ import logging
 import pandas as pd
 import datetime
 
-genai.configure(api_key="AIzaSyCko0EFFk1Ic0O0sXx-298x3Ay-NPsV6FQ")
+
 os.environ['GOOGLE_API_KEY'] = 'AIzaSyCko0EFFk1Ic0O0sXx-298x3Ay-NPsV6FQ'
 genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
+genai.configure(api_key="AIzaSyCko0EFFk1Ic0O0sXx-298x3Ay-NPsV6FQ")
 
 # Set page configuration
 st.set_page_config(page_title="AI Powered - Health and Fitness Personal Coach", layout="wide", initial_sidebar_state="expanded")
