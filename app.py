@@ -1,5 +1,4 @@
-
-import app as st
+import streamlit as st
 import google.generativeai as genai
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
