@@ -399,19 +399,19 @@ st.sidebar.markdown("""
 ## ℹ️ PROBLEM STATEMENT:
 Design an AI-powered health and fitness bot that acts as a personal coach. The bot should monitor fitness metrics like steps, 
 calories, and sleep patterns, generate customized workout and dietary plans based on user goals, and offer real-time tips and motivational messages. 
-Integration with wearable devices for seamless data collection is essential. This bot should empower users to maintain a healthier lifestyle with minimal effort.
+Integration with wearable devices for seamless data collection is essential. This Personal coach will empower users to maintain a healthier lifestyle with minimal effort.
 
 ---
 
-## 👥 SYNTAX SQUAD MEMBERS:
-- **Afrid Sk**
-- **Manikanta**
-- **Praveen**
-- **Satwika**
-- **Thanmai**
+## 👥 DYNAMIC DREAMER:
+- **T.CHAITHRIKA**
+- **P.ANIMMA SRINIVASINE **
+- **B.TEJASWINI**
+- **N.ARCHANA**
+- **T.SAI SPANDANA**
 
 
 """)
 
 st.markdown("---")
-st.write("🚀 Built by **Syntax Squad** during the **BUILD-A-BOT 24hrs Hackathon - December 2024** ")
+st.write("QUOTES")
