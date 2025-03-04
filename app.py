@@ -140,7 +140,7 @@ def create_pdf(report):
     # Footer with team name
     c.setFont("Helvetica-Bold", 10)
     c.setFillColorRGB(0.4, 0.4, 0.4)
-    footer_text = "Generated with ❤️ by SYNTAX SQUAD"
+    footer_text = "Generated with ❤️ by DYNAMIC DREAMER"
     c.drawString(margin, margin / 2, footer_text)
 
     c.save()
@@ -253,7 +253,7 @@ st.markdown(
 st.markdown("""
     <div class="splash-screen">
         <div class="splash-content">
-            <div class="splash-title">✨ Developed by SYNTAX SQUAD ✨</div>
+            <div class="splash-title">✨ Developed by DYNAMIC DREAMER ✨</div>
             
        
     </div>
@@ -271,7 +271,7 @@ if "data" not in st.session_state:
 # Main content wrapper with fade-in animation
 st.markdown('<div class="main-content">', unsafe_allow_html=True)
 
-st.title("🌟 Health & Fitness Personal Coach")
+st.title("🌟Health & Fitness Personal Coach")
 
 
 dashboard_tab, planning_tab = st.tabs(["📈 User Performance Dashboard", "📝 Generate Plans"])
