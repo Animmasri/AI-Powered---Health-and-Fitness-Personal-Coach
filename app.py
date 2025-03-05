@@ -405,10 +405,10 @@ Integration with wearable devices for seamless data collection is essential. Thi
 ---
 
 ## 👥 DYNAMIC DREAMER:
-- **T.CHAITHRIKA**
 - **P.ANIMMA SRINIVASINE**
-- **B.TEJASWINI**
+- **T.CHAITHRIKA**
 - **N.ARCHANA**
+- **B.TEJASWINI**
 - **T.SAI SPANDANA**
 
 
