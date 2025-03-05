@@ -12,6 +12,7 @@ import datetime
 
 os.environ['GOOGLE_API_KEY'] = 'AIzaSyCko0EFFk1Ic0O0sXx-298x3Ay-NPsV6FQ'
 genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
+print(os.getenv('GOOGLE_API_KEY')) 
 
 # Set page configuration
 st.set_page_config(page_title="AI Powered - Health and Fitness Personal Coach", layout="wide", initial_sidebar_state="expanded")
@@ -51,21 +52,14 @@ def query_health_coach(goal, metrics):
     End with a unique motivational quote.
     """
     try:
-        model = genai.GenerativeModel('gemini-pro')
         response = model.generate_content(prompt)
-        if response and response.parts:
+        if response and hasattr(response, "text"):
             generated_response = response.text
-
-            # Append a motivational quote
-            motivational_quote = "🌟 *“Your body can stand almost anything. It’s your mind you have to convince.”*"
-            return f"{generated_response}\n\n{motivational_quote}"
         else:
-            logging.error("No response parts found.")
-            return "Sorry, there was an error generating the response."
+            st.error("⚠️ The response from the API is empty or not properly formatted.")
     except Exception as e:
-        logging.error(f"An error occurred: {e}")
-        return "Sorry, there was an error generating the response."
-
+        st.error(f"⚠️ API error: {str(e)}")
+    
 
 def create_pdf(report):
     buffer = BytesIO()
