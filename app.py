@@ -12,7 +12,6 @@ import datetime
 
 os.environ['GOOGLE_API_KEY'] = 'AIzaSyCko0EFFk1Ic0O0sXx-298x3Ay-NPsV6FQ'
 genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
-genai.configure(api_key="AIzaSyCko0EFFk1Ic0O0sXx-298x3Ay-NPsV6FQ")
 
 # Set page configuration
 st.set_page_config(page_title="AI Powered - Health and Fitness Personal Coach", layout="wide", initial_sidebar_state="expanded")
@@ -23,9 +22,7 @@ if "show_splash" not in st.session_state:
 # Logging setup
 logging.basicConfig(level=logging.INFO)
 
-# Gemini API setup
-os.environ['GOOGLE_API_KEY'] = 'AIzaSyBcd0uSGdTK7b7vv62O1mNcco_fjiD0Xvw'
-genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
+
 
 # Function to query health coach
 def query_health_coach(goal, metrics):
