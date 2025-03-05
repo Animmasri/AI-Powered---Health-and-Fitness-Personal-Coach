@@ -10,6 +10,13 @@ import pandas as pd
 import datetime
 
 
+
+genai.configure(api_key="AIzaSyCko0EFFk1Ic0O0sXx-298x3Ay-NPsV6FQ")
+
+models = genai.list_models()
+for model in models:
+    print(model.name)
+
 os.environ['GOOGLE_API_KEY'] = 'AIzaSyCko0EFFk1Ic0O0sXx-298x3Ay-NPsV6FQ'
 genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
 print(os.getenv('GOOGLE_API_KEY')) 
