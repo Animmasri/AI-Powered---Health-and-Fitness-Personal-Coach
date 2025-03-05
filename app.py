@@ -31,6 +31,7 @@ def query_health_coach(goal, metrics):
     1. A customized workout plan.
     2. A personalized dietary plan.
     3. Additional fitness tips or motivational messages.
+    
 
     Format:
     - Day 1: ...
@@ -51,14 +52,19 @@ def query_health_coach(goal, metrics):
 
     End with a unique motivational quote.
     """
+   
+
     try:
+        model = genai.GenerativeModel('gemini-pro')  # Ensure model is defined
         response = model.generate_content(prompt)
+
         if response and hasattr(response, "text"):
-            generated_response = response.text
+            return response.text.strip()
         else:
-            st.error("⚠️ The response from the API is empty or not properly formatted.")
+            return "⚠️ No response generated. Please try again."
+    
     except Exception as e:
-        st.error(f"⚠️ API error: {str(e)}")
+        return f"⚠️ Error: {str(e)}"
     
 
 def create_pdf(report):
