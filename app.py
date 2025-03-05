@@ -9,14 +9,6 @@ import logging
 import pandas as pd
 import datetime
 
-
-
-genai.configure(api_key="AIzaSyCko0EFFk1Ic0O0sXx-298x3Ay-NPsV6FQ")
-
-models = genai.list_models()
-for model in models:
-    print(model.name)
-
 os.environ['GOOGLE_API_KEY'] = 'AIzaSyCko0EFFk1Ic0O0sXx-298x3Ay-NPsV6FQ'
 genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
 print(os.getenv('GOOGLE_API_KEY')) 
@@ -62,7 +54,7 @@ def query_health_coach(goal, metrics):
    
 
     try:
-        model = genai.GenerativeModel('gemini-pro')  # Ensure model is defined
+        model = genai.GenerativeModel('models/gemini-1.5-pro-latest')  # Ensure model is defined
         response = model.generate_content(prompt)
 
         if response and hasattr(response, "text"):
