@@ -419,4 +419,4 @@ Integration with wearable devices for seamless data collection is essential. Thi
 """)
 
 st.markdown("---")
-st.write("QUOTES")
+st.write("Learn Your Habits and Improve Continuously!")
